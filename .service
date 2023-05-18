@@ -1,0 +1,13 @@
+[Unit]
+Description=Project Name
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/project
+ExecStart=/usr/bin/python3 /home/ubuntu/project/wsgi.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
